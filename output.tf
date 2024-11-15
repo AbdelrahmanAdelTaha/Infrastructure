@@ -21,3 +21,9 @@ output "rds_private_subnet1" {
 output "ec2_private_subnet1" {
   value = module.network.public_subnets[0].id
 }
+output "frontEnd-ec2-ip" {
+  value = module.ec2.instance_public_ips["FrontEnd"]
+}
+output "backEnd-ec2-ip" {
+  value = module.ec2.instance_public_ips["BackEnd"]
+}
